@@ -28,7 +28,7 @@ beforeEach(() => {
     // root-level hook
     // runs before every test
     cy.log('Before Each')
-    cy.visit(Cypress.env('base_url'))
+    cy.visit(Cypress.env('baseUrl'))
 })
 
 afterEach(() => {
