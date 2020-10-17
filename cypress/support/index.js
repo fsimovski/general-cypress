@@ -15,20 +15,26 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import 'cypress-mochawesome-reporter/register'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
 before(() => {
     cy.log('Before')
-    cy.viewport(1920,1080)
+    cy.viewport(1920, 1080)
+    cy.readFile('jsondata.json').then((json) => {
+        Cypress.env({
+            json
+        })
+    })
 })
 
 beforeEach(() => {
     // root-level hook
     // runs before every test
     cy.log('Before Each')
-    cy.visit(Cypress.env('baseUrl'))
+    cy.visit('/')
 })
 
 afterEach(() => {

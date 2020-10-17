@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-17T23:35:30.905Z",
+    "end": "2020-10-17T23:35:53.534Z",
+    "duration": 22629,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d83f207b-c9c2-4476-a6b0-5a8e59ecc92c",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\buy_dresses.test.js",
+      "file": "cypress\\integration\\tests\\buy_dresses.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "09a58da5-416f-4987-be36-d0109358e191",
+          "title": "Buy dresses",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate to the page and order SUMMER DRESSES",
+              "fullTitle": "Buy dresses Navigate to the page and order SUMMER DRESSES",
+              "timedOut": null,
+              "duration": 22568,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clickText(Cypress.env().json.SUMMER_DRESSES);",
+              "err": {},
+              "uuid": "380507e3-9a9e-4d79-b127-3b4806e580ec",
+              "parentUUID": "09a58da5-416f-4987-be36-d0109358e191",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "380507e3-9a9e-4d79-b127-3b4806e580ec"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22568,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

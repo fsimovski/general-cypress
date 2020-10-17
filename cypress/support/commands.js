@@ -23,3 +23,37 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('clickText', (label) => {
+    cy.contains(label).click({
+        multiple: true,
+        force: true
+    })
+})
+
+Cypress.Commands.add('clickElement', (element) => {
+    cy.get(element).click({
+        multiple: true,
+        force: true
+    })
+})
+
+Cypress.Commands.add('verifyPageUrl', (text) => {
+    cy.url().should('include', text)
+})
+
+Cypress.Commands.add('insertValue', (element, value) => {
+    cy.get(element)
+        .type(value)
+        .should('have.value', value)
+})
+
+Cypress.Commands.add('makeLogin', (elementUsername, elementPassword, elementSignIn) => {
+    cy.get(elementUsername)
+        .type(Cypress.env().json.USERNAME)
+
+    cy.get(elementPassword)
+        .type(Cypress.env().json.PASSWORD)
+
+    cy.clickElement(elementSignIn)
+})
