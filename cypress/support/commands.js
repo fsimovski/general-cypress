@@ -49,11 +49,7 @@ Cypress.Commands.add('insertValue', (element, value) => {
 })
 
 Cypress.Commands.add('makeLogin', (elementUsername, elementPassword, elementSignIn) => {
-    cy.get(elementUsername)
-        .type(Cypress.env().json.USERNAME)
-
-    cy.get(elementPassword)
-        .type(Cypress.env().json.PASSWORD)
-
+    cy.insertValue(elementUsername, Cypress.env().json.USERNAME)
+    cy.insertValue(elementPassword, Cypress.env().json.PASSWORD)
     cy.clickElement(elementSignIn)
 })
