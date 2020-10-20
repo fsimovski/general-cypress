@@ -15,7 +15,6 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import 'cypress-mochawesome-reporter/register'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -23,7 +22,7 @@ import 'cypress-mochawesome-reporter/register'
 before(() => {
     cy.log('Before')
     cy.viewport(1920, 1080)
-    cy.readFile('jsondata.json').then((json) => {
+    cy.readFile('cypress/fixtures/json_data.json').then((json) => {
         Cypress.env({
             json
         })

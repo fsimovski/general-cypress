@@ -1,15 +1,8 @@
 {
   "projectId": "9dh7v8",
   "baseUrl": "http://automationpractice.com/",
-  "defaultCommandTimeout": 2000,
+  "defaultCommandTimeout": 5000,
   "video": true,
   "env": {},
-  "requestTimeout": 20000,
-  "reporter": "cypress-mochawesome-reporter",
-  "reporterOptions": {
-    "reportDir": "cypress/reports",
-    "overwrite": true,
-    "html": true,
-    "json": true
-  }
+  "requestTimeout": 20000
 }

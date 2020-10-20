@@ -25,17 +25,21 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('clickText', (label) => {
-    cy.contains(label).click({
-        multiple: true,
-        force: true
-    })
+    cy.contains(label)
+        .should('be.visible')
+        .click({
+            multiple: true,
+            force: true
+        })
 })
 
 Cypress.Commands.add('clickElement', (element) => {
-    cy.get(element).click({
-        multiple: true,
-        force: true
-    })
+    cy.get(element)
+        .should('be.visible')
+        .click({
+            multiple: true,
+            force: true
+        })
 })
 
 Cypress.Commands.add('verifyPageUrl', (text) => {
@@ -44,12 +48,23 @@ Cypress.Commands.add('verifyPageUrl', (text) => {
 
 Cypress.Commands.add('insertValue', (element, value) => {
     cy.get(element)
+        .should('be.visible')
         .type(value)
         .should('have.value', value)
 })
 
 Cypress.Commands.add('makeLogin', (elementUsername, elementPassword, elementSignIn) => {
-    cy.insertValue(elementUsername, Cypress.env().json.USERNAME)
-    cy.insertValue(elementPassword, Cypress.env().json.PASSWORD)
+    cy.insertValue(elementUsername, Cypress.env().json.login.USERNAME)
+    cy.insertValue(elementPassword, Cypress.env().json.login.PASSWORD)
     cy.clickElement(elementSignIn)
+})
+
+Cypress.Commands.add('selectCheckbox', (element) => {
+    cy.clickElement(element).should('be.checked')
+})
+
+Cypress.Commands.add('verifyText', (selector, value) => {
+    cy.get(selector)
+    .should('be.visible')
+    .contains(value)
 })
