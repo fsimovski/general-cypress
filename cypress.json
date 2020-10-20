@@ -4,5 +4,13 @@
   "defaultCommandTimeout": 5000,
   "video": true,
   "env": {},
-  "requestTimeout": 20000
+  "requestTimeout": 20000,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "overwrite": true,
+    "html": true,
+    "json": true
+  },
+  "screenshotsFolder": "cypress/screenshots"
 }

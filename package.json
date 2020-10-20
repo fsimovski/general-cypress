@@ -8,6 +8,9 @@
         "cypress": "cypress run --record --key 064f11fa-8e8a-433e-a774-4d6002f18545 --spec 'cypress/integration/tests/*.js'"
     },
     "devDependencies": {
-        "cypress": "^5.4.0"
+        "cypress": "^5.4.0",
+        "mochawesome": "^6.1.1",
+        "mochawesome-merge": "^4.2.0",
+        "mochawesome-report-generator": "^5.1.0"
     }
 }
