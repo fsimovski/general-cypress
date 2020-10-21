@@ -7,10 +7,11 @@
   "requestTimeout": 20000,
   "reporter": "mochawesome",
   "reporterOptions": {
-    "reportDir": "cypress/reports",
-    "overwrite": true,
-    "html": true,
-    "json": true
+    "charts": true,
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "reportDir": "cypress/report/mochawesome-report"
   },
   "screenshotsFolder": "cypress/screenshots"
 }

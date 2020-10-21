@@ -1,14 +1,21 @@
 {
     "scripts": {
+        "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
+        "pretest": "npm run clean:reports",
         "cypress:open": "node_modules/.bin/cypress open",
         "cypress:specific": "cypress run --spec 'cypress/integration/tests/*.js'",
         "cypress:chrome": "cypress run --browser chrome --spec 'cypress/integration/tests/*.js'",
         "cypress:firefox": "cypress run --browser firefox --spec 'cypress/integration/tests/*.js'",
         "cypress:edge": "cypress run --browser edge --spec 'cypress/integration/tests/*.js'",
-        "cypress": "cypress run --record --key 064f11fa-8e8a-433e-a774-4d6002f18545 --spec 'cypress/integration/tests/*.js'"
+        "cypress": "cypress run --record --key 064f11fa-8e8a-433e-a774-4d6002f18545 --spec 'cypress/integration/tests/*.js'",
+        "combine:reports": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.json",
+        "generate:reports": "marge cypress/report/output.json --reportDir ./ --inline",
+        "post:test": "npm run combine:reports && npm run generate:reports"
     },
     "devDependencies": {
         "cypress": "^5.4.0",
+        "cypress-multi-reporters": "^1.4.0",
+        "mocha": "^8.2.0",
         "mochawesome": "^6.1.1",
         "mochawesome-merge": "^4.2.0",
         "mochawesome-report-generator": "^5.1.0"
