@@ -7,13 +7,12 @@
 ### :running: Run tests
 ```
 > Open cypress by running following command "npm run cypress:open"
-> Run specific suite - "cypress:specific"
-> Run suites on Chrome - "cypress:chrome"
-> Run suites on Firefox - "cypress:firefox"
-> Run suites on Edge - "cypress:edge"
+> Run suites on Chrome - "start:chrome"
+> Run suites on Firefox - "start:firefox"
+> Run suites on Edge - "start:edge"
 ```
 ### :page_facing_up: Reports
 
-Тhe report is created as 'mochawesome.html' file in .\general-cypress\cypress\reports
+Тhe report is created as 'index.html' file in .\general-cypress\cypress\reports
 
 ###### <p align="center">Created by: Filip Simovski</p>
