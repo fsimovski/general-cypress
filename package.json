@@ -13,8 +13,7 @@
         "post:test": "npm run combine:reports && npm run generate:reports",
         "start:chrome": "npm run pre:test & npm run cypress:chrome & npm run post:test",
         "start:firefox": "npm run pre:test & npm run cypress:firefox & npm run post:test",
-        "start:edge": "npm run pre:test & npm run cypress:edge & npm run post:test",
-        "start:parallel": "npx cypress run --record --parallel"
+        "start:edge": "npm run pre:test & npm run cypress:edge & npm run post:test"
     },
     "devDependencies": {
         "cypress": "^5.4.0",
