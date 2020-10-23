@@ -14,7 +14,7 @@
         "start:chrome": "npm run pre:test & npm run cypress:chrome & npm run post:test",
         "start:firefox": "npm run pre:test & npm run cypress:firefox & npm run post:test",
         "start:edge": "npm run pre:test & npm run cypress:edge & npm run post:test",
-        "start:parallel": "cypress run --spec 'cypress/integration/tests/*.js' --record --group 4x-chrome --browser chrome --parallel --ci-build-id $BUILD_NUMBER"
+        "start:parallel": "cypress run --spec 'cypress/integration/tests/*.js' --record --key 064f11fa-8e8a-433e-a774-4d6002f18545 --group 4x-chrome --browser chrome --parallel --ci-build-id $BUILD_NUMBER"
     },
     "devDependencies": {
         "cypress": "^5.4.0",
