@@ -43,7 +43,7 @@ Cypress.Commands.add('clickElement', (element) => {
 })
 
 Cypress.Commands.add('verifyPageUrl', (text) => {
-    cy.url().should('include', text)
+    cy.url().should('include', Cypress.env().json[text])
 })
 
 Cypress.Commands.add('insertValue', (element, value) => {
@@ -53,18 +53,12 @@ Cypress.Commands.add('insertValue', (element, value) => {
         .should('have.value', value)
 })
 
-Cypress.Commands.add('makeLogin', (elementUsername, elementPassword, elementSignIn) => {
-    cy.insertValue(elementUsername, Cypress.env().json.login.USERNAME)
-    cy.insertValue(elementPassword, Cypress.env().json.login.PASSWORD)
-    cy.clickElement(elementSignIn)
-})
-
 Cypress.Commands.add('selectCheckbox', (element) => {
     cy.clickElement(element).should('be.checked')
 })
 
 Cypress.Commands.add('verifyText', (selector, value) => {
     cy.get(selector)
-    .should('be.visible')
-    .contains(value)
+        .should('be.visible')
+        .contains(value)
 })

@@ -15,7 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import addContext from 'mochawesome/addContext';
+import './loginPageBot'
+import addContext from 'mochawesome/addContext'
+const json = require('../fixtures/json_data.json')
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -32,10 +34,8 @@ Cypress.on('test:after:run', (test, runnable) => {
 before(() => {
     cy.log('Before')
     cy.viewport(1920, 1080)
-    cy.readFile('cypress/fixtures/json_data.json').then((json) => {
-        Cypress.env({
-            json
-        })
+    Cypress.env({
+        json
     })
 })
 

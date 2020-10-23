@@ -1,0 +1,6 @@
+{
+    "payByBankBtn": "a[class=\"bankwire\"]",
+    "payByChequeBtn": "a[class=\"cheque\"]",
+    "pageHeadingLabel": "h1[class=\"page-heading\"]",
+    "confirmOrderBtn": "button[class=\"button btn btn-default button-medium\"]"
+}

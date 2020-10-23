@@ -1,0 +1,6 @@
+{
+    "loginBtn": "a[class=\"login\"]",
+    "emailField": "input[id=\"email\"]",
+    "passwordField": "input[id=\"passwd\"]",
+    "signInBtn": "button[id=\"SubmitLogin\"]"
+}
