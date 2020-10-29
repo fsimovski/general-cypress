@@ -62,3 +62,4 @@ Cypress.Commands.add('verifyText', (selector, value) => {
         .should('be.visible')
         .contains(value)
 })
+

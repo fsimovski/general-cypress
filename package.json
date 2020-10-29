@@ -13,7 +13,12 @@
         "post:test": "npm run combine:reports && npm run generate:reports",
         "start:chrome": "npm run pre:test & npm run cypress:chrome & npm run post:test",
         "start:firefox": "npm run pre:test & npm run cypress:firefox & npm run post:test",
-        "start:edge": "npm run pre:test & npm run cypress:edge & npm run post:test"
+        "start:edge": "npm run pre:test & npm run cypress:edge & npm run post:test",
+    
+
+        "cypress:open-api": "node_modules/.bin/cypress open --config-file cypress-api.json"
+
+
     },
     "devDependencies": {
         "cypress": "^5.4.0",
