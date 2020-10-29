@@ -14,5 +14,6 @@
     "json": true,
     "reportDir": "cypress/report/mochawesome-report"
   },
-  "screenshotsFolder": "cypress/screenshots"
+  "screenshotsFolder": "cypress/screenshots",
+  "supportFile": "cypress/support/UI"
 }

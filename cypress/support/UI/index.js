@@ -17,7 +17,7 @@
 import './commands'
 import './loginPageBot'
 import addContext from 'mochawesome/addContext'
-const json = require('../fixtures/json_data.json')
+const json = require('../../fixtures/json_data.json')
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -32,7 +32,7 @@ Cypress.on('test:after:run', (test, runnable) => {
 });
 
 before(() => {
-    cy.log('Before')
+    //cy.log('Before')
     cy.viewport(1920, 1080)
     Cypress.env({
         json
@@ -42,16 +42,16 @@ before(() => {
 beforeEach(() => {
     // root-level hook
     // runs before every test
-    cy.log('Before Each')
+    //cy.log('Before Each')
     cy.visit('/')
 })
 
 afterEach(() => {
     // runs after each test in the block
-    cy.log('After Each')
+    //cy.log('After Each')
 })
 
 after(() => {
     // runs once after all tests in the block
-    cy.log('After')
+    //cy.log('After')
 })
