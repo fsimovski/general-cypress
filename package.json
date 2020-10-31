@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "clean:reports": "rmdir /S /Q cypress\\report && mkdir cypress\\report && mkdir cypress\\report\\mochawesome-report-UI",
+        "clean:reports": "rm -rf /S /Q cypress/report && mkdir cypress/report && mkdir cypress/report/mochawesome-report-UI",
         "pre:test": "npm run clean:reports",
         "cypress:open": "node_modules/.bin/cypress open",
         "cypress:specific": "cypress run --spec 'cypress/integration/**/*.feature'",
