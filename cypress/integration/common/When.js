@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 const loginPage = require('../../pageObjects/general/loginPage.json')
 
