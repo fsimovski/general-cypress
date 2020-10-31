@@ -15,5 +15,6 @@
     "reportDir": "cypress/report/mochawesome-report"
   },
   "screenshotsFolder": "cypress/screenshots",
-  "supportFile": "cypress/support/UI"
+  "supportFile": "cypress/support/UI",
+  "testFiles": "**/*.{feature,features}"
 }
