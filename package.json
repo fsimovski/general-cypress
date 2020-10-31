@@ -14,7 +14,6 @@
         "start:chrome": "npm run pre:test & npm run cypress:chrome & npm run post:test",
         "start:firefox": "npm run pre:test & npm run cypress:firefox & npm run post:test",
         "start:edge": "npm run pre:test & npm run cypress:edge & npm run post:test",
-        "start": "sirv public --port 8080",
         "cypress:open-api": "node_modules/.bin/cypress open --config-file cypress-api.json"
     },
     "devDependencies": {
