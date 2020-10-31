@@ -2,7 +2,7 @@ Feature: Navigate and buy
 
     I want to buy evening dress from Automationpractice
 
-    @focus
+@regression
     Scenario: EVENING DRESSES
         Given I open Automationpractice page
         When Insert "USERNAME" and "PASSWORD" credentials

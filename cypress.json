@@ -12,7 +12,7 @@
     "overwrite": false,
     "html": false,
     "json": true,
-    "reportDir": "cypress/report/mochawesome-report"
+    "reportDir": "cypress/report/mochawesome-report-UI"
   },
   "screenshotsFolder": "cypress/screenshots",
   "supportFile": "cypress/support/UI",

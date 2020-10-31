@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "clean:reports": "rmdir /S /Q cypress\\report && mkdir cypress\\report && mkdir cypress\\report\\mochawesome-report",
+        "clean:reports": "rmdir /S /Q cypress\\report && mkdir cypress\\report && mkdir cypress\\report\\mochawesome-report-UI",
         "pre:test": "npm run clean:reports",
         "cypress:open": "node_modules/.bin/cypress open",
         "cypress:specific": "cypress run --spec 'cypress/integration/**/*.feature'",
@@ -8,7 +8,7 @@
         "cypress:firefox": "cypress run --browser firefox --spec 'cypress/integration/**/*.feature'",
         "cypress:edge": "cypress run --browser edge --spec 'cypress/integration/**/*.feature'",
         "cypress": "cypress run --record --key 064f11fa-8e8a-433e-a774-4d6002f18545 --spec 'cypress/integration/**/*.feature'",
-        "combine:reports": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/index.json",
+        "combine:reports": "mochawesome-merge cypress/report/mochawesome-report-UI/*.json > cypress/report/index.json",
         "generate:reports": "marge cypress/report/index.json --reportDir ./ --inline",
         "post:test": "npm run combine:reports && npm run generate:reports",
         "start:chrome": "npm run pre:test & npm run cypress:chrome & npm run post:test",
@@ -19,12 +19,15 @@
     "devDependencies": {
         "cypress": "^5.4.0",
         "cypress-cucumber-preprocessor": "^4.0.0",
+        "cypress-file-upload": "^4.1.1",
         "cypress-multi-reporters": "^1.4.0",
+        "cypress-xpath": "^1.6.0",
         "lodash": "^4.17.20",
         "mocha": "^8.2.0",
         "mochawesome": "^6.1.1",
         "mochawesome-merge": "^4.2.0",
-        "mochawesome-report-generator": "^5.1.0"
+        "mochawesome-report-generator": "^5.1.0",
+        "multiple-cucumber-html-reporter": "^1.18.0"
     },
     "cypress-cucumber-preprocessor": {
         "nonGlobalStepDefinitions": true

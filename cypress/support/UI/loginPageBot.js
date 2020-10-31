@@ -30,5 +30,6 @@ const loginPage = require('../../pageObjects/general/loginPage.json')
 Cypress.Commands.add('makeLogin', (username, password) => {
     cy.insertValue(loginPage.emailField, Cypress.env().json.login[username])
     cy.insertValue(loginPage.passwordField, Cypress.env().json.login[password])
-    cy.clickElement(loginPage.signInBtn)
+    //cy.clickElement(loginPage.signInBtn)
+    cy.get(loginPage.signInBtn).type('{enter}')
 })
