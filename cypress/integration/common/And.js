@@ -1,9 +1,9 @@
 /// <reference types="Cypress" />
 import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
-const basePage = require('../../pageObjects/general/basePage.json')
-const actionMenuPage = require('../../pageObjects/general/acitonMenuPage.json')
-const dressesPage = require('../../pageObjects/general/dressesPage.json')
-const paymentPage = require('../../pageObjects/general/paymentPage.json')
+const basePage = require('../../page_objects/general/base-page.json')
+const actionMenuPage = require('../../page_objects/general/aciton-menu-page.json')
+const dressesPage = require('../../page_objects/general/dresses-page.json')
+const paymentPage = require('../../page_objects/general/payment-page.json')
 
 And(/^I order "(.*)"$/, (text) => {
     cy.clickElement(`${actionMenuPage.dressesBtn}`)

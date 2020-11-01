@@ -25,7 +25,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-const loginPage = require('../../pageObjects/general/loginPage.json')
+const loginPage = require('../../page_objects/general/login-page.json')
 
 Cypress.Commands.add('makeLogin', (username, password) => {
     cy.insertValue(loginPage.emailField, Cypress.env().json.login[username])
