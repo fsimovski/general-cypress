@@ -1,7 +1,9 @@
 {
     "scripts": {
-        "clean:reports": "rm -rf /S /Q cypress/report && mkdir cypress/report && mkdir cypress/report/mochawesome-report-UI",
-        "pre:test": "npm run clean:reports",
+        "clean:reports": "if exist cypress\\report rmdir /S /Q cypress\\report",
+        "create:folder":"mkdir cypress\\report",
+        "create:subfolder":"mkdir cypress\\report\\mochawesome-report-UI",
+        "pre:test": "npm run clean:reports & npm run create:folder & npm run create:subfolder",
         "cypress:open": "node_modules/.bin/cypress open",
         "cypress:specific": "cypress run --spec 'cypress/integration/**/*.feature'",
         "cypress:chrome": "cypress run --browser chrome --spec 'cypress/integration/**/*.feature'",
