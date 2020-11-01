@@ -1,15 +1,16 @@
 {
     "scripts": {
         "clean:reports": "run-script-os",
-        "create:folder": "run-script-os",
-        "create:subfolder": "run-script-os",
         "clean:reports:darwin:linux": "rm -rf cypress/report",
         "clean:reports:win32": "if exist cypress\\report rmdir /S /Q cypress\\report",
+        "create:folder": "run-script-os",
         "create:folder:darwin:linux": "mkdir cypress/report",
         "create:folder:win32": "mkdir cypress\\report",
+        "create:subfolder": "run-script-os",
         "create:subfolder:darwin:linux": "mkdir cypress/report/mochawesome-report-UI",
         "create:subfolder:win32": "mkdir cypress\\report\\mochawesome-report-UI",
         "pre:test": "npm run clean:reports && npm run create:folder && npm run create:subfolder",
+        "pre:test:server":"npm run clean:reports:darwin:linux && npm run create:folder:darwin:linux && npm run create:subfolder:darwin:linux",
         "cypress:open": "node_modules/.bin/cypress open",
         "cypress:specific": "cypress run --spec 'cypress/integration/**/*.feature'",
         "cypress:chrome": "cypress run --browser chrome --spec 'cypress/integration/**/*.feature'",
@@ -20,6 +21,7 @@
         "generate:reports": "marge cypress/report/index.json --reportDir ./ --inline",
         "post:test": "npm run combine:reports && npm run generate:reports",
         "start:chrome": "npm run pre:test && npm run cypress:chrome && npm run post:test",
+        "start:chrome:server": "npm run pre:test:server && npm run cypress:chrome && npm run post:test",
         "start:firefox": "npm run pre:test && npm run cypress:firefox && npm run post:test",
         "start:edge": "npm run pre:test && npm run cypress:edge && npm run post:test",
 
