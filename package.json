@@ -1,9 +1,15 @@
 {
     "scripts": {
-        "clean:reports": "if exist cypress\\report rmdir /S /Q cypress\\report",
-        "create:folder":"mkdir cypress\\report",
-        "create:subfolder":"mkdir cypress\\report\\mochawesome-report-UI",
-        "pre:test": "npm run clean:reports & npm run create:folder & npm run create:subfolder",
+        "clean:reports": "run-script-os",
+        "create:folder": "run-script-os",
+        "create:subfolder": "run-script-os",
+        "clean:reports:darwin:linux": "rm -rf cypress/report",
+        "clean:reports:win32": "if exist cypress\\report rmdir /S /Q cypress\\report",
+        "create:folder:darwin:linux": "mkdir cypress/report",
+        "create:folder:win32": "mkdir cypress\\report",
+        "create:subfolder:darwin:linux": "mkdir cypress/report/mochawesome-report-UI",
+        "create:subfolder:win32": "mkdir cypress\\report\\mochawesome-report-UI",
+        "pre:test": "npm run clean:reports && npm run create:folder && npm run create:subfolder",
         "cypress:open": "node_modules/.bin/cypress open",
         "cypress:specific": "cypress run --spec 'cypress/integration/**/*.feature'",
         "cypress:chrome": "cypress run --browser chrome --spec 'cypress/integration/**/*.feature'",
@@ -29,7 +35,8 @@
         "mochawesome": "^6.1.1",
         "mochawesome-merge": "^4.2.0",
         "mochawesome-report-generator": "^5.1.0",
-        "multiple-cucumber-html-reporter": "^1.18.0"
+        "multiple-cucumber-html-reporter": "^1.18.0",
+        "run-script-os": "^1.1.3"
     },
     "cypress-cucumber-preprocessor": {
         "nonGlobalStepDefinitions": true
