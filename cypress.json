@@ -16,5 +16,6 @@
   },
   "screenshotsFolder": "cypress/screenshots",
   "supportFile": "cypress/support/UI",
-  "testFiles": "**/*.{feature,features}"
+  "testFiles": "**/*.{feature,features}",
+  "experimentalSourceRewriting": true
 }

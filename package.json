@@ -10,7 +10,7 @@
         "create:subfolder:darwin:linux": "mkdir cypress/report/mochawesome-report-UI",
         "create:subfolder:win32": "mkdir cypress\\report\\mochawesome-report-UI",
         "pre:test": "npm run clean:reports && npm run create:folder && npm run create:subfolder",
-        "pre:test:server":"npm run clean:reports:darwin:linux && npm run create:folder:darwin:linux && npm run create:subfolder:darwin:linux",
+        "pre:test:server": "npm run clean:reports:darwin:linux && npm run create:folder:darwin:linux && npm run create:subfolder:darwin:linux",
         "cypress:open": "node_modules/.bin/cypress open",
         "cypress:specific": "cypress run --spec 'cypress/integration/**/*.feature'",
         "cypress:chrome": "cypress run --browser chrome --spec 'cypress/integration/**/*.feature'",
@@ -25,7 +25,7 @@
         "start:firefox": "npm run pre:test && npm run cypress:firefox && npm run post:test",
         "start:edge": "npm run pre:test && npm run cypress:edge && npm run post:test",
 
-
+        
         "create:subfolder-api": "run-script-os",
         "create:subfolder-api:darwin:linux": "mkdir cypress/report/mochawesome-report-API",
         "create:subfolder-api:win32": "mkdir cypress\\report\\mochawesome-report-API",
@@ -37,9 +37,8 @@
         "post:test-api": "npm run combine:reports-api && npm run generate:reports-api",
         "start:api": "npm run pre:test-api && npm run cypress:run-api && npm run post:test-api"
     },
-
     "devDependencies": {
-        "cypress": "^5.4.0",
+        "cypress": "^5.5.0",
         "cypress-cucumber-preprocessor": "^4.0.0",
         "cypress-file-upload": "^4.1.1",
         "cypress-multi-reporters": "^1.4.0",
