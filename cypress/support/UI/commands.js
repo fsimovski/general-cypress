@@ -64,3 +64,37 @@ Cypress.Commands.add('verifyText', (selector, value) => {
         .contains(value)
 })
 
+Cypress.Commands.add('generateRandomEmail', (element, stringLength, domain) => {
+    cy.get(element).type(makeString())
+    function makeString() {
+        var randomString = "";
+        var charachters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789";
+
+        for (var i = 0; i < stringLength; i++)
+            randomString += charachters.charAt(Math.floor(Math.random() * charachters.length));
+
+        return randomString + domain
+    }
+})
+
+Cypress.Commands.add('generateRandomString', (element, stringLength) => {
+    cy.get(element).type(makeString())
+    function makeString() {
+        var randomString = "";
+        var charachters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+        for (var i = 0; i < stringLength; i++)
+            randomString += charachters.charAt(Math.floor(Math.random() * charachters.length));
+
+        return randomString
+    }
+})
+
+Cypress.Commands.add('selectRadioButton', (text, element) => {
+    switch ((text).toLowerCase().trim()) {
+        case "mr": case "mrs":
+            cy.clickElement(element).should('be.checked')
+            break
+    }
+
+})

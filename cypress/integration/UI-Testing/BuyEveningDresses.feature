@@ -5,6 +5,6 @@ Feature: Navigate and buy
 @regression
     Scenario: EVENING DRESSES
         Given I open Automationpractice page
-        When Insert "USERNAME" and "PASSWORD" credentials
+        When I Make "login"
         And I order "SUMMER DRESS"
         Then Verify that "Order confirmation" is successful

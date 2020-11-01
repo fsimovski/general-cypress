@@ -1,7 +1,14 @@
 {
   "URL": "/index.php",
+  "REGISTRATION_URL": "/index.php?controller=authentication&back=my-account#account-creation",
   "login": {
     "USERNAME": "jonssmith091@gmail.com",
+    "PASSWORD": "P@ssw0rd"
+  },
+  "registration": {
+    "DOMAIN": "@random.com",
+    "FIRST_NAME": "FirstName",
+    "LAST_NAME": "LastName",
     "PASSWORD": "P@ssw0rd"
   }
 }
