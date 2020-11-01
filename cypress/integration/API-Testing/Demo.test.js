@@ -19,5 +19,14 @@ describe('HTTP Example', function () {
         });
     });
 
+    it('PATCH User', function () {
+
+        cy.patchUsers("Name Example", "QA Engineer" + getUsersFunctionResponse.page).then(function (response) {
+            postUsersResponse = response.body;
+            console.log(postUsersResponse.name);
+
+        });
+    });
+
 });
 

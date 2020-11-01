@@ -19,11 +19,23 @@
         "combine:reports": "mochawesome-merge cypress/report/mochawesome-report-UI/*.json > cypress/report/index.json",
         "generate:reports": "marge cypress/report/index.json --reportDir ./ --inline",
         "post:test": "npm run combine:reports && npm run generate:reports",
-        "start:chrome": "npm run pre:test & npm run cypress:chrome & npm run post:test",
-        "start:firefox": "npm run pre:test & npm run cypress:firefox & npm run post:test",
-        "start:edge": "npm run pre:test & npm run cypress:edge & npm run post:test",
-        "cypress:open-api": "node_modules/.bin/cypress open --config-file cypress-api.json"
+        "start:chrome": "npm run pre:test && npm run cypress:chrome && npm run post:test",
+        "start:firefox": "npm run pre:test && npm run cypress:firefox && npm run post:test",
+        "start:edge": "npm run pre:test && npm run cypress:edge && npm run post:test",
+
+
+        "create:subfolder-api": "run-script-os",
+        "create:subfolder-api:darwin:linux": "mkdir cypress/report/mochawesome-report-API",
+        "create:subfolder-api:win32": "mkdir cypress\\report\\mochawesome-report-API",
+        "pre:test-api": "npm run clean:reports && npm run create:folder && npm run create:subfolder-api",
+        "cypress:open-api": "node_modules/.bin/cypress open --config-file cypress-api.json",
+        "cypress:run-api": "cypress run --config-file cypress-api.json --browser chrome --spec 'cypress/integration/API-Testing/*.js'",
+        "combine:reports-api": "mochawesome-merge cypress/report/mochawesome-report-API/*.json > cypress/report/index-API.json",
+        "generate:reports-api": "marge cypress/report/index-API.json --reportDir ./ --inline",
+        "post:test-api": "npm run combine:reports-api && npm run generate:reports-api",
+        "start:api": "npm run pre:test-api && npm run cypress:run-api && npm run post:test-api"
     },
+
     "devDependencies": {
         "cypress": "^5.4.0",
         "cypress-cucumber-preprocessor": "^4.0.0",

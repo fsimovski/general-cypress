@@ -7,6 +7,7 @@
   "env": {},
   "supportFile":"cypress/support/API/index-api.js",
   "supportFile":"cypress/support/API/services.js",
+  "pluginsFile": false,
   "integrationFolder":"cypress/integration/API-Testing",
   "requestTimeout": 20000,
   "reporter": "mochawesome",

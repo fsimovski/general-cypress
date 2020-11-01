@@ -48,13 +48,52 @@ Cypress.Commands.add('postUsers', (name, job) => {
         "name": name,
         "job": job
     }
-    return cy.request('POST', '/user', body)
+    return cy.request('POST', '/users', body)
         .then(function (response) {
             expect(response.body).to.have.property('name');
             expect(response.body).to.have.property('job');
             expect(response.body).to.have.property('id');
             expect(response.body).to.have.property('createdAt');
             expect(response.status).to.be.equal(201);
+            expect(response.duration).to.be.lessThan(5000);
+            expect(response.body.name).to.be.equal(body.name);
+            expect(response.body.job).to.be.equal(body.job);
+
+
+        })
+})
+
+Cypress.Commands.add('postUsers', (name, job) => {
+    let body = {
+        "name": name,
+        "job": job
+    }
+    return cy.request('POST', '/users', body)
+        .then(function (response) {
+            expect(response.body).to.have.property('name');
+            expect(response.body).to.have.property('job');
+            expect(response.body).to.have.property('id');
+            expect(response.body).to.have.property('createdAt');
+            expect(response.status).to.be.equal(201);
+            expect(response.duration).to.be.lessThan(5000);
+            expect(response.body.name).to.be.equal(body.name);
+            expect(response.body.job).to.be.equal(body.job);
+
+
+        })
+})
+
+Cypress.Commands.add('patchUsers', (name, job) => {
+    let body = {
+        "name": name,
+        "job": job
+    }
+    return cy.request('PATCH', '/user', body)
+        .then(function (response) {
+            expect(response.body).to.have.property('name');
+            expect(response.body).to.have.property('job');
+            expect(response.body).to.have.property('updatedAt');
+            expect(response.status).to.be.equal(200);
             expect(response.duration).to.be.lessThan(5000);
             expect(response.body.name).to.be.equal(body.name);
             expect(response.body.job).to.be.equal(body.job);
