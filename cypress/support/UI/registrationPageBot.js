@@ -35,4 +35,7 @@ Cypress.Commands.add('makeRegistration', () => {
     cy.insertValue(`${registrationPage.customerFirstName}`, Cypress.env().json.registration.FIRST_NAME)
     cy.insertValue(`${registrationPage.customerLastName}`, Cypress.env().json.registration.LAST_NAME)
     cy.insertValue(`${registrationPage.customerPassword}`, Cypress.env().json.registration.PASSWORD)
+    cy.selectDropDownText(`${registrationPage.dateOfBirthDay}`, '20')
+    cy.selectDropDownText(`${registrationPage.dateOfBirthMonth}`, 'May')
+    cy.selectDropDownText(`${registrationPage.dateOfBirthYear}`, '1990')
 })

@@ -5,5 +5,8 @@
     "mrsGender": "input[id=\"id_gender2\"]",
     "customerFirstName": "input[id=\"customer_firstname\"]",
     "customerLastName": "input[id=\"customer_lastname\"]",
-    "customerPassword": "input[id=\"passwd\"]"
+    "customerPassword": "input[id=\"passwd\"]",
+    "dateOfBirthDay": "select[id=\"days\"]",
+    "dateOfBirthMonth": "select[id=\"months\"]",
+    "dateOfBirthYear": "select[id=\"years\"]"
 }

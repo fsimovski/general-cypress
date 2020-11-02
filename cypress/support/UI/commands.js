@@ -96,5 +96,8 @@ Cypress.Commands.add('selectRadioButton', (text, element) => {
             cy.clickElement(element).should('be.checked')
             break
     }
+})
 
+Cypress.Commands.add('selectDropDownText', (element, text) => {
+    cy.get(element).select(text)
 })
