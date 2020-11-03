@@ -6,7 +6,7 @@
   "video": true,
   "env": {},
   "supportFile":"cypress/support/API/index-api.js",
-  "supportFile":"cypress/support/API/services.js",
+  "supportFile":"cypress/support/API/services.ts",
   "pluginsFile": false,
   "integrationFolder":"cypress/integration/API-Testing",
   "requestTimeout": 20000,
