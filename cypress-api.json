@@ -1,7 +1,7 @@
 {
   "chromeWebSecurity": false,
   "projectId": "9dh7v8",
-  "baseUrl": "https://reqres.in/api/",
+  "baseUrl": "https://jsonplaceholder.typicode.com",
   "defaultCommandTimeout": 5000,
   "video": true,
   "env": {},

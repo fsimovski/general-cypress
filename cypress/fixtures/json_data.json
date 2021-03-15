@@ -9,6 +9,11 @@
     "DOMAIN": "@random.com",
     "FIRST_NAME": "FirstName",
     "LAST_NAME": "LastName",
-    "PASSWORD": "P@ssw0rd"
+    "PASSWORD": "P@ssw0rd",
+    "ADDRESS": "Test Address",
+    "CITY": "Test City",
+    "STATE": "Indiana",
+    "ZIP_POSTAL_CODE": "12345",
+    "MOBILE_PHONE": "12345"
   }
 }

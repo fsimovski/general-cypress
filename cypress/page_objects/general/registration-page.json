@@ -8,5 +8,11 @@
     "customerPassword": "input[id=\"passwd\"]",
     "dateOfBirthDay": "select[id=\"days\"]",
     "dateOfBirthMonth": "select[id=\"months\"]",
-    "dateOfBirthYear": "select[id=\"years\"]"
+    "dateOfBirthYear": "select[id=\"years\"]",
+    "address": "input[id=\"address1\"]",
+    "city": "input[id=\"city\"]",
+    "state": "select[id=\"id_state\"]",
+    "zipPostalCode": "input[id=\"postcode\"]",
+    "mobilePhone": "input[id=\"phone_mobile\"]",
+    "registerBtn": "button[id=\"submitAccount\"]"
 }

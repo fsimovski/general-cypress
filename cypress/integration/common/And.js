@@ -25,7 +25,7 @@ And(/^I order "(.*)"$/, (text) => {
     }
     cy.clickElement(`${basePage.addToCartBtn}`)
     cy.clickElement(`${basePage.proceedToCheckoutBtn1}`)
-    cy.clickElement(`${basePage.proceedToCheckoutBtn2}`)
+    //cy.clickElement(`${basePage.proceedToCheckoutBtn2}`)
     cy.clickElement(`${basePage.proceedToCheckoutBtn3}`)
     cy.selectCheckbox(`${basePage.agreeTermsCheckbox}`)
     cy.clickElement(`${basePage.proceedToCheckoutBtn4}`)

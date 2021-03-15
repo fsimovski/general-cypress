@@ -1,7 +1,7 @@
 import { patchUserResponse } from './interface/patcUserResponse';
 
 import { getUsersResponse } from "./interface/getUserDataResponse";
-import { postUserResponse } from "./interface/postUserResponse"
+import { postUserResponse } from "./interface/postUserResponse";
 
 export const getUsersFunction = (page: String) => {
 

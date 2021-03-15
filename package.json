@@ -24,8 +24,6 @@
         "start:chrome:server": "npm run pre:test:server && npm run cypress:chrome && npm run post:test",
         "start:firefox": "npm run pre:test && npm run cypress:firefox && npm run post:test",
         "start:edge": "npm run pre:test && npm run cypress:edge && npm run post:test",
-
-        
         "create:subfolder-api": "run-script-os",
         "create:subfolder-api:darwin:linux": "mkdir cypress/report/mochawesome-report-API",
         "create:subfolder-api:win32": "mkdir cypress\\report\\mochawesome-report-API",
@@ -50,12 +48,14 @@
         "mochawesome-report-generator": "^5.1.0",
         "multiple-cucumber-html-reporter": "^1.18.0",
         "run-script-os": "^1.1.3",
-        "typescript": "^4.0.5"
+        "typescript": "^4.1.3"
     },
     "cypress-cucumber-preprocessor": {
         "nonGlobalStepDefinitions": true
     },
     "dependencies": {
-        "json-schema-to-typescript": "^9.1.1"
+        "@cypress/schema-tools": "^4.7.7",
+        "json-schema-to-typescript": "^9.1.1",
+        "ts-node": "^9.1.1"
     }
 }

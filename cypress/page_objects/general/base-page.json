@@ -1,6 +1,6 @@
 {
     "addToCartBtn": "button[class=\"exclusive\"]",
-    "proceedToCheckoutBtn1": "a[class=\"btn btn-default button button-medium\"]",
+    "proceedToCheckoutBtn1": "a[title=\"Proceed to checkout\"]",
     "proceedToCheckoutBtn2": "a[class=\"button btn btn-default standard-checkout button-medium\"]",
     "proceedToCheckoutBtn3": "button[name=\"processAddress\"]",
     "proceedToCheckoutBtn4": "button[name=\"processCarrier\"]",
